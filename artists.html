@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+        .artist-info {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .back-link {
+            color: #ff4500;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="artist-name">Artist Name</h1>
+        <div class="artist-info">
+            <p id="artist-bio">Loading artist information...</p>
+        </div>
+        <a href="index.html" class="back-link">← Back to Albums</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const artistName = params.get("name");
+        const artists = {
+            "Halsey": {
+                bio: "Ashley Nicolette Frangipane (IPA: /ˌfrændʒɪˈpɑːni/ FRAN-jih-PAH-nee;[1] born September 29, 1994), known professionally as Halsey (/ˈhɔːlzi/ HAWL-zee), is an American singer-songwriter and actress. Noted for her[a] distinctive singing voice,[2] she has received several accolades including three Billboard Music Awards, a Billboard Women in Music Award,[3] an American Music Award and nominations for three Grammy Awards. She was included on Time's annual list of the 100 most influential people in the world in 2020.",
+            },
+            "TheWeeknd": {
+                bio: "Abel Makkonen Tesfaye (Amharic: አቤል መኮንን ተስፋዬ; born February 16, 1990), known professionally as the Weeknd, is a Canadian singer-songwriter and actor.[2][3] Recognized for his unconventional musical production, artistic reinventions, and falsetto register, Tesfaye is regarded as highly innovative and influential. His accolades include four Grammy Awards, 20 Billboard Music Awards, 22 Juno Awards, six American Music Awards, three MTV Video Music Awards, a Latin Grammy Award and nominations for an Academy Award and a Primetime Emmy Award.",
+            },
+            "Eminem": {
+                bio: "Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem (often stylized as EMINƎM), is an American rapper, songwriter, and record producer. He is credited with popularizing hip-hop in Middle America and is widely regarded as one of the greatest rappers of all time.[3] His success is considered to have broken racial barriers to the acceptance of white rappers in popular music. While much of his transgressive work during the late 1990s and early 2000s made him a controversial figure, he came to be a representation of popular angst of the American underclass and has influenced many musical artists. His most successful songs on the U.S. Billboard Hot 100 include The Real Slim Shady, Without Me, Lose Yourself, Not Afraid, Love the Way You Lie, The Monster, Godzilla, and Houdini.",
+            }
+        };
+
+        if (artistName && artists[artistName]) {
+            document.getElementById("artist-name").textContent = artistName;
+            document.getElementById("artist-bio").textContent = artists[artistName].bio;
+        } else {
+            document.getElementById("artist-bio").textContent = "Artist information not found.";
+        }
+    </script>
+</body>
+</html> 

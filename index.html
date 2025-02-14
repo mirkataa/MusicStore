@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <style>
+            body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: white;
+        text-align: center;
+    }
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    .album {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1e1e1e;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .album:hover {
+        transform: scale(1.05);
+    }
+    .album img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+    }
+    .info {
+        flex-grow: 1;
+        margin-left: 15px;
+        text-align: left;
+    }
+    .artist-link {
+        color: #ff4500;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .artist-link:hover {
+        text-decoration: underline;
+    }
+    .buy-btn {
+        background-color: #ff4500;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .buy-btn:hover {
+        background-color: #e63e00;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            max-width: 90%;
+            padding: 15px;
+        }
+        .album {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .album img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .info {
+            margin-left: 0;
+            text-align: center;
+        }
+        .buy-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .container {
+            max-width: 95%;
+            padding: 10px;
+        }
+        .album {
+            flex-direction: column;
+            padding: 15px;
+        }
+        .album img {
+            width: 80px;
+            height: 80px;
+        }
+        .info {
+            margin-left: 0;
+        }
+        .buy-btn {
+            width: 100%;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Music Store</h1>
+
+        <div class="album">
+            <img src="images/album1.jpg" alt="Album Cover">
+            <div class="info">
+                <h3>HFK</h3>
+                <p><a href="artists.html?name=Halsey">Halsey</a></p>
+            </div>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="album">
+            <img src="images/album2.jpg" alt="Album Cover">
+            <div class="info">
+                <h3>ROOM93</h3>
+                <p><a href="artists.html?name=Halsey">Halsey</a></p>
+            </div>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="album">
+            <img src="images/album3.jpg" alt="Album Cover">
+            <div class="info">
+                <h3>Starboy</h3>
+                <p><a href="artists.html?name=TheWeeknd">The Weeknd</a></p>
+            </div>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="album">
+            <img src="images/album4.jpg" alt="Album Cover">
+            <div class="info">
+                <h3>Encore</h3>
+                <p><a href="artists.html?name=Eminem">Eminem</a></p>
+            </div>
+            <button class="buy-btn">Buy</button>
+        </div>
+    </div>
+</body>
+</html> 
