@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Music Store</title>
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🎵 Music Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="conract.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkout-form">
+            <h2>Billing Details</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="address" placeholder="Shipping Address" required>
+
+            <h2>Payment Details</h2>
+            <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="expiry" placeholder="MM/YY" required>
+            <input type="text" id="cvv" placeholder="CVV" required>
+
+            <h2>Order Summary</h2>
+            <div id="order-summary"></div>
+            <p id="total-price">Total: $0</p>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Music Store. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/checkout.js"></script>
+</body>
+</html>
