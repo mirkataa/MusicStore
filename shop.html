@@ -14,11 +14,10 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">🛒 Cart <span id="cart-count">0</span></a></li>
                 <li><a href="checkout.html">Checkout</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
             </ul>
         </nav>
@@ -30,31 +29,35 @@
     </section>
 
     <section class="product-list">
-        <div class="product">
+        <div class="product" data-description="A beautifully crafted acoustic guitar with a wooden body and six strings, perfect for strumming and fingerpicking.">
             <img src="images/guitar.jpg" alt="Acoustic Guitar">
             <h2>Acoustic Guitar</h2>
             <p>$299</p>
+            <button class="view-details">View Details</button>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product" data-description="A sleek electronic keyboard with various keys and features for music production.">
             <img src="images/keyboard.jpg" alt="Electronic Keyboard">
             <h2>Electronic Keyboard</h2>
             <p>$499</p>
+            <button class="view-details">View Details</button>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product" data-description="A complete drum set featuring multiple drums and cymbals for percussion enthusiasts.">
             <img src="images/drums.jpg" alt="Drum Set">
             <h2>Drum Set</h2>
             <p>$699</p>
+            <button class="view-details">View Details</button>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product" data-description="A high-quality professional microphone designed for studio recording and live performances.">
             <img src="images/microphone.jpg" alt="Microphone">
             <h2>Professional Microphone</h2>
             <p>$199</p>
+            <button class="view-details">View Details</button>
             <button class="add-to-cart">Add to Cart</button>
         </div>
     </section>
@@ -67,5 +70,6 @@
     </footer>
 
     <script src="scripts/shop.js"></script>
+    <script src="scripts/cartCount.js"></script>
 </body>
 </html>

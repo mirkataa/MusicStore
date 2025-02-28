@@ -63,6 +63,23 @@ nav ul li a {
     color: white;
     border: none;
     cursor: pointer;
+    animation: pulse 1.5s infinite; /* Apply the pulse animation continuously */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to original */
+    }
+}
+
+.search-bar button:hover {
+    animation: pulse 0.6s infinite; /* Apply the pulse animation on hover */
 }
 
 .featured-products {

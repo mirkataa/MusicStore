@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Music Store</title>
-    <link rel="stylesheet" href="styles/cart.css">
+    <title>Product Details - Music Store</title>
+    <link rel="stylesheet" href="styles/product.css">
 </head>
 <body>
 
@@ -19,22 +19,28 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
+
             </ul>
         </nav>
     </header>
 
-    <section class="cart-container">
-        <h1>Your Shopping Cart</h1>
-        <div id="cart-items"></div>
-        <p id="total-price">Total: $0</p>
-        <button id="checkout">Checkout</button>
+    <section class="product-container">
+        <div class="product-image">
+            <img id="product-img" src="" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">Product Name</h1>
+            <p id="product-description">Product Description</p>
+            <h2 id="product-price">$0.00</h2>
+            <button id="add-to-cart">Add to Cart</button>
+        </div>
     </section>
 
     <footer>
         <p>© 2025 Music Store. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/cart.js"></script>
+    <script src="scripts/product.js"></script>
     <script src="scripts/cartCount.js"></script>
 </body>
 </html>

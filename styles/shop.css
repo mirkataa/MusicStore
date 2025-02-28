@@ -77,17 +77,27 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-.add-to-cart {
-    background: #ff6600;
+.product button {
+    background: #28a745;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 14px;
+    margin: 5px;
+    transition: background 0.3s ease;
 }
 
-.add-to-cart:hover {
-    background: #ff4500;
+.product button.view-details {
+    background: #007bff;
+}
+
+.product button.view-details:hover {
+    background: #0056b3;
+}
+
+.product button.add-to-cart:hover {
+    background: #218838;
 }
 
 footer {

@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const index = this.getAttribute("data-index");
                 cart.splice(index, 1);
                 localStorage.setItem("cart", JSON.stringify(cart));
+                window.dispatchEvent(new Event("cartUpdated"));
                 updateCartDisplay();
             });
         });
